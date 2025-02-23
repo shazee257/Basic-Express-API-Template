@@ -22,13 +22,13 @@ app.use(cors({ origin: "*", credentials: true }));
 
 app.post('/', (req, res) => {
   console.log('req.body >>>>>>>>>', req.body);
-  generateResponse(req.body, `${process.env.APP_NAME} API v1.0 - Health check passed`, res);
+  generateResponse(req.body, `${process.env.APP_NAME} API v2.0 - Health check passed`, res);
 });   
 
 app.get('/', (req, res) => {
   console.log("API is called!");
   console.log(`API Calling from ${req?.ip}`);
-  generateResponse(null, `${process.env.APP_NAME} API v1.0 - Health check passed`, res);
+  generateResponse(null, `${process.env.APP_NAME} API v2.0 - Health check passed`, res);
 });
 
 const appRoutes = new API(app);
